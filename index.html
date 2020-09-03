@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="pages/index.css">
+  <meta name="description" content="Project mesto">
+  <meta name="keywords" content="project-mesto, yandex, practicum">
+  <meta name="author" content="Larichev Nikita">
+  <title>mesto</title>
+</head>
+<body class="page">
+  <header class="header">
+    <img class="header__logo" src="images/Vector.png" alt="Логотип">
+  </header>
+  <main class="content">
+    <section class="profile">
+      <img class="profile__image" src="images/photo.jpg" alt="Фотография">
+      <div class="profile__info">
+        <div class="profile__info-row">
+          <p class="profile__name">Ларичев Никита</p>
+          <button class="profile__edit-button">
+            <img class="profile__edit-button-logo" src="images/edit.png" alt="Логотип кнопки редактирования">
+          </button>
+        </div>
+        <p class="profile__job">Студент n-го ВУЗа</p>
+      </div>
+      <button class="profile__add-button">
+        <img class="profile__add-button-logo" src="images/add.png" alt="Логотип кнопки добавления">
+      </button>
+    </section>
+    <section class="elements">
+      <div class="elements__element">
+        <img class="elements__image" src="images/karachaevsk.jpg" alt="Карачаевск">
+        <div class="elements__row">
+          <p class="elements__text">Карачаевск</p>
+          <img class="elements__like-logo" src="images/like.png" alt="Нравится">
+        </div>
+      </div>
+      <div class="elements__element">
+        <img class="elements__image" src="images/elbrus.png" alt="Эльбрус">
+        <div class="elements__row">
+          <p class="elements__text">Гора Эльбрус</p>
+          <img class="elements__like-logo" src="images/like.png" alt="Нравится">
+        </div>
+      </div>
+      <div class="elements__element">
+        <img class="elements__image" src="images/dombai.png" alt="Домбай">
+        <div class="elements__row">
+          <p class="elements__text">Домбай</p>
+          <img class="elements__like-logo" src="images/like.png" alt="Нравится">
+        </div>
+      </div>
+      <div class="elements__element">
+        <img class="elements__image" src="images/gamova.jpg" alt="Гамова">
+        <div class="elements__row">
+          <p class="elements__text">Гамовский маяк</p>
+          <img class="elements__like-logo" src="images/like.png" alt="Нравится">
+        </div>
+      </div>
+      <div class="elements__element">
+        <img class="elements__image" src="images/reineke.jpg" alt="Рейнеке">
+        <div class="elements__row">
+          <p class="elements__text">Остров Рейнеке</p>
+          <img class="elements__like-logo" src="images/like.png" alt="Нравится">
+        </div>
+      </div>
+      <div class="elements__element">
+        <img class="elements__image" src="images/lazo.jpg" alt="Лазо">
+        <div class="elements__row">
+          <p class="elements__text">Бухта Кит</p>
+          <img class="elements__like-logo" src="images/like.png" alt="Нравится">
+        </div>
+      </div>
+    </section>
+    <div class="popup">
+      <div class="popup__window">
+        <p class="popup__title">Редактировать профиль</p>
+        <div class="popup__text">
+          <input type="text" class="popup__name">
+        </div>
+        <div class="popup__text">
+          <input type="text" class="popup__job">
+        </div>
+        <button class="popup__save" type="submit">
+          <p class="popup__save-text">Сохранить</p>
+        </button>
+        <button class="popup__abort-button">
+          <img class="popup__abort-logo" src="images/abort.png" alt="Крестик">
+        </button>
+      </div>
+    </div>
+  </main>
+  <footer class="footer">
+    <p class="footer__text">© 2020 Mesto Russia</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

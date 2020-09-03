@@ -1,0 +1,21 @@
+.popup__abort-button {
+    width: 40.7px;
+    height: 40.7px;
+    position: absolute;
+    top: -13%;
+    right: -6.5%;
+    border: none;
+    padding: 0;
+    background-color: rgba(0,0,0,0);
+    transition: .3s ease;
+    z-index: -1;
+    outline: none;
+  }
+  
+  .popup__abort-button:hover {
+    opacity: 0.8;
+  }
+  
+  .popup__abort-button:focus {
+    outline: none;
+  }
