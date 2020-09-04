@@ -1,16 +1,14 @@
 let content = document.querySelector('.content');
 let editButton = content.querySelector('.profile__edit-button');
-let abortButton = content.querySelector('.popup__abort-button');
+let closeButton = content.querySelector('.popup__abort-button');
 let popup = content.querySelector('.popup');
-let saveButton = content.querySelector('.popup__save');
+let saveForm = content.querySelector('.popup__form');
+let profileName = content.querySelector('.profile__name');
+let profileJob = content.querySelector('.profile__job');
+let popupName = content.querySelector('.popup__text_type_name');
+let popupJob = content.querySelector('.popup__text_type_job');
 
 function editInformation() {
-  let profileName = content.querySelector('.profile__name');
-  let profileJob = content.querySelector('.profile__job');
-
-  let popupName = content.querySelector('.popup__name');
-  let popupJob = content.querySelector('.popup__job');
-
   popupName.value = profileName.textContent;
   popupJob.value = profileJob.textContent;
   popup.classList.add('popup_opened');
@@ -18,28 +16,19 @@ function editInformation() {
 
 editButton.addEventListener('click', editInformation);
 
-function abortInformation() {
-  let popupName = content.querySelector('.popup__name');
-  let popupJob = content.querySelector('.popup__job');
-  popupName.textContent = "";
-  popupJob.textContent = "";
+function closePopup() {
   popup.classList.remove('popup_opened');
 }
 
-abortButton.addEventListener('click', abortInformation);
+closeButton.addEventListener('click', closePopup);
 
 function saveInformation(evt) {
   evt.preventDefault();
-  let profileName = content.querySelector('.profile__name');
-  let profileJob = content.querySelector('.profile__job');
-  let popupName = content.querySelector('.popup__name');
-  let popupJob = content.querySelector('.popup__job');
   profileName.textContent = popupName.value;
   profileJob.textContent = popupJob.value;
-  popup.classList.remove('popup_opened');
+  closePopup();
 }
 
-saveButton.addEventListener('submit', saveInformation);
-saveButton.addEventListener('click', saveInformation);
+saveForm.addEventListener('submit', saveInformation);
 
 
