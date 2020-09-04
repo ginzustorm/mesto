@@ -1,0 +1,7 @@
+.elements__row {
+    margin: 25px auto 31px;
+    display: flex;
+    width: 246px;
+    flex-direction: row;
+    justify-content: space-between;
+  }
