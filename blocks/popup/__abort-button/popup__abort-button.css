@@ -21,10 +21,14 @@
     outline: none;
   }
 
-  @media all and (min-width: 320px) and (max-width: 500px) {
+  @media all and (min-width: 320px) and (max-width: 512px) {
     .popup__abort-button {
       right: -7.5%;
       top: -6.3%;
+      width: 30.7px;
+      height: 30.7px;
+    }
+    .popup__abort-button-logo {
       width: 30.7px;
       height: 30.7px;
     }

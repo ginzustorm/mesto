@@ -2,3 +2,10 @@
     display: flex;
     flex-direction: row;
 }
+
+@media all and (min-width: 320px) and (max-width: 500px) {
+    .profile__info-row {
+      width: 300px;
+      justify-content: center;
+    }
+  }

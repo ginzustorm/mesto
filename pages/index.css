@@ -25,6 +25,7 @@
 @import url(../blocks/popup/__window/popup__window.css);
 @import url(../blocks/popup/_opened/popup_opened.css);
 @import url(../blocks/popup/__form/popup__form.css);
+@import url(../blocks/popup/__abort-button-logo/popup__abort-button-logo.css);
 
 @import url(../blocks/profile/profile.css);
 @import url(../blocks/profile/__add-button/profile__add-button.css);
