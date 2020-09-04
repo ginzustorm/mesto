@@ -5,12 +5,11 @@
     border: 2px solid #FFFFFF;
     box-sizing: border-box;
     border-radius: 2px;
-    position: absolute;
-    right: 0px;
-    top: 35px;
     padding: 0;
     transition: .3s ease;
     outline: none;
+    justify-self: flex-end;
+    align-self: center;
   }
 
   .profile__add-button:hover {
