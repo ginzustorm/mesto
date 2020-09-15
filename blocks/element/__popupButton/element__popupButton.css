@@ -1,0 +1,12 @@
+.element__popupButton {
+    outline: none;
+    border: none;
+    padding: 0;
+    background: black;
+    width: 282px;
+    height: 282px;
+}
+
+.element__popupButton:hover {
+    cursor: pointer;
+}

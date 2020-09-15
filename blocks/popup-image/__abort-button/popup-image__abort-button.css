@@ -1,0 +1,35 @@
+.popup-image__abort-button {
+    max-width: 40.7px;
+    height: 40.7px;
+    position: absolute;
+    right: -30px;
+    top: -50px;
+    border: none;
+    padding: 0;
+    background-color: rgba(0,0,0,0);
+    transition: .3s ease;
+    z-index: -1;
+    outline: none;
+  }
+  
+  .popup-image__abort-button:hover {
+    opacity: 0.6;
+    cursor: pointer;
+  }
+  
+  .popup-image__abort-button:focus {
+    outline: none;
+  }
+
+  @media all and (min-width: 320px) and (max-width: 512px) {
+    .popup-image__abort-button {
+      top: -25px;
+      right: -25px;
+      width: 30.7px;
+      height: 30.7px;
+    }
+    .popup-image__abort-button-logo {
+      width: 30.7px;
+      height: 30.7px;
+    }
+  }

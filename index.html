@@ -32,60 +32,22 @@
       </button>
     </section>
     <section class="elements">
-      <article class="element">
-        <img class="element__image" src="images/karachaevsk.jpg" alt="Карачаевск">
-        <div class="element__row">
-          <p class="element__text">Карачаевск</p>
-          <button class="element__like-button" alt="Нравится">
-            <img src="images/like.svg">
+      <template id="element">
+        <article class="element">
+          <button class="element__popupButton">
+            <img class="element__image">
           </button>
-        </div>
-      </article>
-      <article class="element">
-        <img class="element__image" src="images/elbrus.png" alt="Эльбрус">
-        <div class="element__row">
-          <p class="element__text">Гора Эльбрус</p>
-          <button class="element__like-button">
-            <img src="images/like.svg" alt="Нравится">
+          <div class="element__row">
+            <p class="element__text"></p>
+            <button class="element__like-button">
+              <img src="images/like.svg" alt="Нравится" class="element__like-button-white">
+            </button>
+          </div>
+          <button class="element__delete-button">
+            <img class="element__trash-bin" src="images/trash-bin.svg" alt="Помойка">
           </button>
-        </div>
-      </article>
-      <article class="element">
-        <img class="element__image" src="images/dombai.png" alt="Домбай">
-        <div class="element__row">
-          <p class="element__text">Домбай</p>
-          <button class="element__like-button">
-            <img src="images/like.svg" alt="Нравится">
-          </button>
-        </div>
-      </article>
-      <article class="element">
-        <img class="element__image" src="images/gamova.jpg" alt="Гамова">
-        <div class="element__row">
-          <p class="element__text">Гамовский маяк</p>
-          <button class="element__like-button">
-            <img src="images/like.svg" alt="Нравится">
-          </button>
-        </div>
-      </article>
-      <article class="element">
-        <img class="element__image" src="images/reineke.jpg" alt="Рейнеке">
-        <div class="element__row">
-          <p class="element__text">Остров Рейнеке</p>
-          <button class="element__like-button">
-            <img src="images/like.svg" alt="Нравится">
-          </button>
-        </div>
-      </article>
-      <article class="element">
-        <img class="element__image" src="images/lazo.jpg" alt="Лазо">
-        <div class="element__row">
-            <p class="element__text">Бухта Кит</p>
-          <button class="element__like-button">
-            <img src="images/like.svg" alt="Нравится">
-          </button>
-        </div>
-      </article>
+        </article>
+      </template>
     </section>
     <div class="popup">
       <div class="popup__window">
@@ -100,6 +62,30 @@
             <img src="images/close.svg" class="popup__abort-button-logo" alt="Закрыть">           
           </button>
         </form>
+      </div>
+    </div>
+    <div class="popup-add">
+      <div class="popup-add__window">
+        <p class="popup-add__title">Новое место</p>
+        <form class="popup-add__form" name="place-information">
+          <input type="text" name="name" class="popup-add__text popup-add__text_type_name" placeholder="Название">
+          <input type="text" name="link" class="popup-add__text popup-add__text_type_link" placeholder="Ссылка на картинку">
+          <button class="popup-add__add-button" type="submit">
+            Создать
+          </button>
+          <button class="popup-add__abort-button">
+            <img src="images/close.svg" class="popup-add__abort-button-logo" alt="Закрыть">
+          </button>
+        </form>
+      </div>
+    </div>
+    <div class="popup-image">
+      <div class="popup-image__window">
+        <button class="popup-image__abort-button">
+          <img src="images/close.svg" class="popup-image__abort-button-logo" alt="Закрыть">           
+        </button>
+        <img class="popup-image__photo">
+        <p class="popup-image__annotation"></p>
       </div>
     </div>
   </main>
