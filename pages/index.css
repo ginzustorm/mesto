@@ -14,6 +14,7 @@
 @import url(../blocks/element/__popupButton/element__popupButton.css);
 @import url(../blocks/element/__trash-bin/element__trash-bin.css);
 @import url(../blocks/element/__delete-button/element__delete-button.css);
+@import url(../blocks/element/__like-button/_active/element__like-button_active.css);
 
 @import url(../blocks/footer/footer.css);
 @import url(../blocks/footer/__text/footer__text.css);

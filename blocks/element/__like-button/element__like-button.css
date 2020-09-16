@@ -5,7 +5,8 @@
     transition: .3s ease-in;
     padding: 0;
     margin-left: 25px;
-    background: white;
+    background-color: white;
+    background-image: url(../../../images/like.svg);
 }
 
 

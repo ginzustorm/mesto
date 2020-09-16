@@ -40,7 +40,6 @@
           <div class="element__row">
             <p class="element__text"></p>
             <button class="element__like-button">
-              <img src="images/like.svg" alt="Нравится" class="element__like-button-white">
             </button>
           </div>
           <button class="element__delete-button">
@@ -58,18 +57,18 @@
           <button class="popup__save" type="submit">
             Сохранить
           </button>
-          <button class="popup__abort-button">
-            <img src="images/close.svg" class="popup__abort-button-logo" alt="Закрыть">           
-          </button>
         </form>
+        <button class="popup__abort-button">
+          <img src="images/close.svg" class="popup__abort-button-logo" alt="Закрыть">     
+        </button>
       </div>
     </div>
     <div class="popup-add">
       <div class="popup-add__window">
         <p class="popup-add__title">Новое место</p>
         <form class="popup-add__form" name="place-information">
-          <input type="text" name="name" class="popup-add__text popup-add__text_type_name" placeholder="Название">
-          <input type="text" name="link" class="popup-add__text popup-add__text_type_link" placeholder="Ссылка на картинку">
+          <input type="text" name="name" class="popup-add__text popup-add__text_type_name" placeholder="Название" required>
+          <input type="text" type="url" name="link" class="popup-add__text popup-add__text_type_link" placeholder="Ссылка на картинку" required>
           <button class="popup-add__add-button" type="submit">
             Создать
           </button>
