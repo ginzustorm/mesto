@@ -48,31 +48,48 @@
         </article>
       </template>
     </section>
-    <div class="popup">
+    <div class="popup popup_type_profile-edit">
       <div class="popup__window">
-        <p class="popup__title"></p>
-        <form class="popup__form" name="person-information">
-          <input type="text" name="name" class="popup__text popup__text_type_name">
-          <input type="text" name="job" class="popup__text popup__text_type_job">
+        <p class="popup__title">Редактировать профиль</p>
+        <form class="popup__form popup__form_type_profile" name="person-information">
+          <input type="text" name="name" class="popup__text popup__text_type_name" required placeholder="Имя">
+          <input type="text" name="job" class="popup__text popup__text_type_job" required placeholder="Должность">
           <button class="popup__save" type="submit">
-            
+            Сохранить
           </button>
         </form>
-        <button class="popup__abort-button">
+        <button class="popup__abort-button popup__abort-button_type_profile-edit">
           <img src="images/close.svg" class="popup__abort-button-logo" alt="Закрыть">     
         </button>
       </div>
     </div>
 
-    <div class="popup popup-image">
-      <div class="popup-image__window">
-        <button class="popup-image__abort-button">
-          <img src="images/close.svg" class="popup-image__abort-button-logo" alt="Закрыть">           
+    <div class="popup popup_type_place-add">
+      <div class="popup__window">
+        <p class="popup__title">Новое место</p>
+        <form class="popup__form popup__form_type_place" name="add-place">
+          <input type="text" name="name" class="popup__text popup__text_type_place-name" required placeholder="Название">
+          <input type="link" name="link" class="popup__text popup__text_type_link" required placeholder="Ссылка на картинку">
+          <button class="popup__save" type="submit">
+            Создать
+          </button>
+        </form>
+        <button class="popup__abort-button popup__abort-button_type_place-add">
+          <img src="images/close.svg" class="popup__abort-button-logo" alt="Закрыть">     
         </button>
-        <img class="popup-image__photo">
-        <p class="popup-image__annotation"></p>
       </div>
     </div>
+
+    <div class="popup popup_type_image-show">
+      <div class="popup__image-window">
+        <button class="popup__abort-button popup__abort-button_type_image-show popup__abort-button_image-position">
+          <img src="images/close.svg" class="popup__abort-button-logo" alt="Закрыть">           
+        </button>
+        <img class="popup__image-photo">
+        <p class="popup__image-annotation"></p>
+      </div>
+    </div>
+
   </main>
   <footer class="footer">
     <p class="footer__text">© 2020 Mesto Russia</p>
