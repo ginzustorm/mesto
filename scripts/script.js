@@ -59,7 +59,7 @@ function addEventListenerLike (lb) {
 //5. Иной обработчик кнопки
 function addEventListenerImageOpen (image) {
   image.addEventListener('click', function() {
-    switchPopupOpened('.popup_type_image-show');
+    switchPopupOpened(popupImage);
     const imagePopupPhoto = document.querySelector('.popup__image-photo');
     const elementPhoto = image.firstElementChild;
     const imagePopupText = document.querySelector('.popup__image-annotation');
@@ -94,7 +94,7 @@ function createCard (cardInfo) {
 
 //2. Функция для открытия и закрытия всех попапов
 function switchPopupOpened(popupType) {
-  document.querySelector(popupType).classList.toggle('popup_opened');
+  popupType.classList.toggle('popup_opened');
 }
 //---------------------------------------------//
 
@@ -102,15 +102,20 @@ function switchPopupOpened(popupType) {
 function addPlace() {
   const popupPlaceName = content.querySelector('.popup__text_type_place-name');
   const popupPlaceLink = content.querySelector('.popup__text_type_link');
-  elements.prepend(createCard({name: popupPlaceName.value, link: popupPlaceLink.value}));
+  addPlaceOnPage(createCard({name: popupPlaceName.value, link: popupPlaceLink.value}));
   popupPlaceLink.value = null;
   popupPlaceName.value = null;
-  switchPopupOpened('.popup_type_place-add');
+  switchPopupOpened(popupAdd);
+}
+
+//Данный функционал, а именно elements.prepend и функционал на 105 строке дублируется, вынесите данную реализацию в отдельную функцию и используйте там где необходимо. 
+function addPlaceOnPage(card) {
+  elements.prepend(card);
 }
 
 function initiateArrayCards() {
   initialCards.forEach(function (item) {
-    elements.prepend(createCard(item));
+    addPlaceOnPage(createCard(item));
   });
 }
 
@@ -121,14 +126,14 @@ function submitPlaceInfo() {
 function submitProfileInfo() {
   profileName.textContent = popupName.value;
   profileJob.textContent = popupJob.value;
-  switchPopupOpened('.popup_type_profile-edit');
+  switchPopupOpened(popup);
 };
 
   //4. Функция сабмита формы редактирования профиля + обработчик отправки формы
   editButton.addEventListener('click', function () {
     popupName.value = profileName.textContent;
     popupJob.value = profileJob.textContent;
-    switchPopupOpened('.popup_type_profile-edit');
+    switchPopupOpened(popup);
   });
 
   saveProfileInfo.addEventListener('submit', function(evt) {
@@ -142,20 +147,20 @@ function submitProfileInfo() {
   });
 
   closeButton.addEventListener('click', function() {
-    switchPopupOpened('.popup_type_profile-edit');
+    switchPopupOpened(popup);
   });
 
   closeButtonAdd.addEventListener('click', function() {
-    switchPopupOpened('.popup_type_place-add');
+    switchPopupOpened(popupAdd);
   });
 
   closeButtonImage.addEventListener('click', function() {
-    switchPopupOpened('.popup_type_image-show');
+    switchPopupOpened(popupImage);
   })
 
   //4. Функция самбита формы добавления карточки + обработчик отправки формы
   addButton.addEventListener('click', function() {
-    switchPopupOpened('.popup_type_place-add');
+    switchPopupOpened(popupAdd);
   });
 
   initiateArrayCards();
